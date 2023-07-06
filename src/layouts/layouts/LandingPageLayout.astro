@@ -2,7 +2,7 @@
 import SkipToContent from '../../components/SkipToContent.astro';
 import '../../css/config.css'
 import MainContent from '../../components/MainContent.astro';
-import HeroFullScreen from '../../components/Heros/HeroFullScreen.astro';
+import HeroMidScreenFade from '../../components/Heros/HeroMidScreenFade.astro';
 import HeaderTopBar from '../../components/Headers/HeaderTopBar.astro';
 import Meta from '../../components/Meta.astro';
 import type { Layout } from '../../config';
@@ -31,7 +31,7 @@ const {
 
 		<HeaderTopBar props sticky={false} transparent="false" />
 
-		<HeroFullScreen props
+		<HeroMidScreenFade props
 			align='left'
 			heading="Discover your neurospicy potential" 
 			subheading='Join our Transformative Community Today!'
