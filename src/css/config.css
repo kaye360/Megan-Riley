@@ -24,7 +24,7 @@
         
         /* Color Config */
 
-        --body-bg-color                  : hsl( var(--primary-color) 97% );
+        --body-bg-color                  : hsl( var(--primary-color) 95% );
         --body-text-color                : hsl( var(--primary-color) 20% );
 
         --contact-bar-bg-color           : hsl( var(--primary-color) 10% );
