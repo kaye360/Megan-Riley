@@ -15,17 +15,17 @@ export const SITE_SHORT_NAME = 'Megan Riley'
 
 export const LOGO_NAME = SITE_SHORT_NAME
 
-export const PHONE_NUMBER = '604-533-1234'
+export const PHONE_NUMBER = ''
 
-export const EMAIL_ADDRESS = 'email@email.com'
+export const EMAIL_ADDRESS = ''
 
-export const LOCATION = 'Port Coquitlam, BC'
+export const LOCATION = ''
 
-export const HEADER_LOGO_PATH = '/img/logo.svg'
+export const HEADER_LOGO_PATH = './img/logo.svg'
 
-export const HERO_IMG_PATH = '/img/hero.webp'
+export const HERO_IMG_PATH = './img/hero.webp'
 
-export const FAVICON_PATH = '/meta-img/favicon.svg'
+export const FAVICON_PATH = './meta-img/favicon.svg'
 
 
 /**
