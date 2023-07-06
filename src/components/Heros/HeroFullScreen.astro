@@ -43,25 +43,31 @@ const {
 ---
 
 
-<div class="absolute top-0 left-0 w-full h-screen z-[-1] bg-[hsl(var(--primary-color)_25%)]">
-    <img src={HERO_IMG_PATH} class="w-screen h-screen object-cover mix-blend-overlay" />
-</div>
 
-<section id="hero">
+<section id="hero" class="relative bg-primary-200 bg-[]">
 
+    <div class="absolute left-[-0%] lg:left-[10%] top-[10%] z-10 w-64 h-64 bg-secondary-300 bg-opacity-30 blur-3xl "></div>
+    <div class="hidden md:block absolute right-[-0%] lg:right-[10%] bottom-[10%] z-10 w-64 h-64 bg-primary-300 blur-3xl "></div>
+    
     <Wrapper 
         width="max" 
         padding="inline"
         class={`
-            hero-wrapper grid min-h-screen
+            hero-wrapper grid overflow-hidden relative py-10 md:py-32
             ${align === 'left' || align === 'right' ? 'items-center' : ''}
             ${align === 'center' ? 'place-items-center' : ''}
             ${align === 'right' ? ' justify-items-end' : ''}
         `}
     >
+    
+        <div class="order-2 md:-order-none md:absolute md:top-0 md:bottom-0 md:right-0 md:z-10 md:w-3/4 overflow-hidden bg-primary-200 bg-opacity-25">
+            <img src={HERO_IMG_PATH} class="hidden md:block absolute inset-0 z-20 w-full object-cover object-bottom mix-blend-overlay" />
+            <div class="hidden md:block absolute inset-0 z-30 bg-gradient-to-r from-primary-200 to-transparent"></div>
+        </div>
+        
 
         <div class={`[]
-            grid gap-8 md:w-2/3
+            grid gap-8 md:w-2/3 relative z-30 order-1 md:order-none
             ${align === 'left' ? '' : ''}
             ${align === 'center' ? 'text-center' : ''}
         `}>
@@ -70,12 +76,12 @@ const {
                 {heading}
             </h1>
 
-            <p>
+            <p class="max-w-[25ch] font-semibold">
                 {subheading}
             </p>
 
             <div class={`
-                flex items-center gap-2
+                flex items-center gap-4
                 ${align === 'center' ? 'justify-center' : ''}
             `}>
                 
@@ -95,16 +101,21 @@ const {
 
     </Wrapper>
 
+    <Wrapper class="pb-12 bg-primary-200 bg-opacity-10 md:hidden">
+        <img src={HERO_IMG_PATH} class="block w-full object-cover mix-blend-overlay opacity-60" />
+    </Wrapper>
+
 </section>
 
 
 <style>
 
 h1 {
+    max-width : 20ch;
     font-size: 2.5rem !important;
     line-height: 2.8rem;
     letter-spacing: 0.05rem;
-    font-weight: 600 !important;
+    font-weight: 900 !important;
     color : var(--hero-text-color);
 }
 
@@ -117,12 +128,15 @@ p {
 .secondary-hero-CTA {
     display : flex;
     align-items: center;
+    gap : 0.75rem;
     padding : 0.75rem 1.25rem;
     font-weight : 600;
     letter-spacing: 0.05rem;
+    border-radius: 0.75rem;
 }
 
 .primary-hero-CTA {
+    border-bottom-right-radius: 0;
     background-color : var(--hero-CTA-bg-color);
     color : var(--hero-CTA-text-color);
 }
@@ -133,37 +147,26 @@ p {
 }
 
 .secondary-hero-CTA {
-    color : var(--hero-text-color);
+    border-bottom-left-radius: 0;
+    border : 1px solid var(--hero-CTA-bg-color);
+    color : var(--hero-CTA-bg-color);
 }
 
 .secondary-hero-CTA:hover, .secondary-hero-CTA:focus {
-    text-decoration: underline;
+    background : hsla(var(--secondary-color) 50% / 0.1);
 }
 
 </style>
 
 
-
 <script>
 
-function sizeHeroToViewportHeight() {
-    
-    const heroWrapper = document.querySelector('.hero-wrapper') as HTMLDivElement
-    const header      = document.querySelector('header') as HTMLDivElement
+const h1 = document.querySelector('h1') as HTMLHeadingElement
 
-    const heroScreenSpace = window.innerHeight - header.getBoundingClientRect().height
-    const heroHeight      = window.innerWidth > 768 ? heroScreenSpace : heroScreenSpace + 65
-    
-    heroWrapper.style.minHeight = heroHeight + 'px'
+if(h1.textContent) {
+    h1.innerHTML = h1.textContent.replace('neurospicy', 'neuro<span class="text-secondary-500">spicy</span>')
 }
-
-window.addEventListener('DOMContentLoaded', sizeHeroToViewportHeight)
-
-// Dont resize on mobile to avoid content shifting due to dynamic viewport height
-if( window.innerWidth > 768) {
-    window.addEventListener('resize', sizeHeroToViewportHeight)
-}
-
 
 
 </script>
+

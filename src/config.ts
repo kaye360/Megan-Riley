@@ -9,9 +9,9 @@
  * Site Info
  */
 
-export const SITE_FULL_NAME = 'Full Cool Site Name Ltd.'
+export const SITE_FULL_NAME = 'Megan Riley>'
 
-export const SITE_SHORT_NAME = 'Cool Site'
+export const SITE_SHORT_NAME = 'Megan Riley'
 
 export const LOGO_NAME = SITE_SHORT_NAME
 
@@ -48,34 +48,6 @@ export const NAV_LINKS : Navlink[] = [
         mainNav   : true,
         footerNav : true,
         cta       : false
-    },
-    {
-        title     : 'About',
-        path      : '/about',
-        mainNav   : true,
-        footerNav : true,
-        cta       : false
-    },
-    {
-        title     : 'Contact',
-        path      : '/contact',
-        mainNav   : true,
-        footerNav : true,
-        cta       : false
-    },
-    {
-        title     : 'Privacy Policy',
-        path      : '/privact',
-        mainNav   : false,
-        footerNav : true,
-        cta       : false
-    },
-    {
-        title     : 'Call to Action',
-        path      : '/cta',
-        mainNav   : true,
-        footerNav : true,
-        cta       : true
     },
 ]
 

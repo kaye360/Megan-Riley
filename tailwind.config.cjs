@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily : {
-				'sans' : ['Helvetica']
+				'sans' : ['Red Hat Display', 'Helvetica', 'system-ui', 'sans-serif']
 			},
 			colors : {
 				"primary" : {

@@ -2,171 +2,218 @@
 import Wrapper from '../components/Wrapper.astro';
 import TextFlow from '../components/TextFlow.astro';
 import EvenColumns from '../components/EvenColumns.astro';
-import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
+import Divider from '../components/Divider.astro';
+import Icon from '../components/Icon.astro';
+import { HEADER_LOGO_PATH } from '../config';
 
 ---
 
 <Layout props
 	type="landingPage"
-	title="Home"
-	description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro in expedita beatae perferendis quod qui perspiciatis numquam."
+	title="Welcome"
+	description="Through the integration of neuroscience, heart-math, intuition, meditation, and transformative inquiry, we create miracles and shift the trajectory of our lives. As the community rapidly grow, it's clear that there is an increasing hunger for what's possible. We stand on the precipice of real personal power and heart-centered living."
 >
 
-	<section>
-		<Wrapper width="max" padding='both'>
+<section id="learn-more">
+	<Wrapper width="max" padding="both">
+		<EvenColumns class='items-center gap-8'>
 
-			<h2 class="mb-[1em] border-b-2 border-sky-100">Card Example</h2>
+			<div class="h-1 bg-secondary-100"></div>
+			
+			<TextFlow>
 
-			<EvenColumns breakpoints={2} class='gap-6'>
+				<h2>Congratulations!</h2>
+				
+				<p>
+					Welcome to the Neurospicy Community, where we celebrate and activate our unique neurodivergent gifts and support one another in navigating a world that is not designed for us.
+				</p>
+	
+				<p>
+					If you've always felt different, highly sensitive, empathic, or struggled with brain differences such as ADHD, dyslexia, Autism, OCD, Empath, HSP, Traumatic Brain Injuries, this is the place for, you.
+				</p>
+	
+				<p>
+					Whether you're a student, a business wonder, a psychic, a mystic or a creative: 
+					<span class="font-bold">You Belong Here.</span>
+				</p>
+			</TextFlow>
 
-				<Card 
-					href="#" 
-					linkText='Click me'
-					linkClass='mx-2'
-					class='drop-shadow shadow-md shadow-slate-200'
-					img='https://source.unsplash.com/random/300x200?space'
-				>
-					<h3 slot="heading" class="px-2">
-						Tolestias quae veniam quibusdam?
-					</h3>
+			<div class="h-1 bg-secondary-100"></div>
 
-					<p slot="content" class="px-2">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, voluptas!
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, voluptas!
-					</p>
-				</Card>
+		</EvenColumns>
+	</Wrapper>
+</section>
 
-				<Card
-					clickable={true} 
-					href="#" 
-					linkText='Click me'
-					linkClass='mx-2'
-					class="drop-shadow shadow-md shadow-slate-200"
-					img="https://source.unsplash.com/random/300x200?city"
-				>
+<section>
+	<Wrapper width="max" padding="both">
+		<EvenColumns class="gap-8">
 
-					<h3 slot="heading" class="px-2">Lorem ipsum dolor sit.</h3>
+			<img src="/img/megan-2.webp" alt="Megan Riley" width="726" height="534" class="object-cover object-right" />
 
-					<p slot="content" class="px-2">Lorem ipsum dolor sit amet consectetur amet consectetur amet consectetur, adipisicing elit. Recusandae, provident. Repudiandae ipsa deserunt nemo veniam unde repellendus quo possimus porro?</p>
-				</Card>
+			<TextFlow>
+	
+				<p>
+					My name is Megan and I'm honored to be your multi-sensory mentor and teacher. As someone with multi sensory gifts, I see, hear, feel, sense, taste and smell things that most people don't.  
+				</p>
+	
+				<p>
+					I have a ridiculously high IQ and at one point growing up memorized the phone book, just in case I needed one of the numbers. (And if you couldn't tell I also have 2 forms of ADHD and am Autistic) I have premonitory dreams, astral travel, see patterns, predict cool stuff and have a wild memory for somewhat useful information.
+				</p>
+	
+				<p>
+					I'm also a person in recovery and completely get the world of addiction and sensitivity.But this community isn't about me; it's about us.  
+				</p>
+	
+				<p class="text-xl">
+					We are a collective of individuals on a journey of personal power, intuition, discernment and heart.
+				</p>
+			</TextFlow>
+		</EvenColumns>
+	</Wrapper>
+</section>
 
-				<Card
-					clickable={true} 
-					href="#" 
-					linkText='Click me'
-					linkClass='mx-2'
-					class="drop-shadow shadow-md shadow-slate-200"
-					img="https://source.unsplash.com/random/300x200?weather"
-				>
+<section>
+	<Wrapper width="max" padding="both">
+		<EvenColumns class="items-center">
+			<TextFlow class="px-10 py-16 bg-primary-700 text-primary-100 rounded-tl-3xl rounded-br-3xl">
+				<p>
+					Here in the NeuroSpicy Community, we embrace our courage to fully embody our intuition, our weirdness and our unique gifts. Together we generate empowering futures for ourselves, our families and humanity as a whole. This is a place where love, nurturing, and powerful transformation flourish.
+				</p>
 
-					<h3 slot="heading" class="px-2">Lorem ipsum dolor sit.</h3>
+				<Divider class="bg-primary-600" />
+	
+				<p>
+					Through the integration of neuroscience, heart-math, intuition, meditation, and transformative inquiry, we create miracles and shift the trajectory of our lives.  As the community rapidly grow, it's clear that there is an increasing hunger for what's possible.  We stand on the precipice of real personal power and heart-centered living.
+				</p>
+				
+			</TextFlow>
 
-					<p slot="content" class="px-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, provident. Repudiandae ipsa deserunt nemo veniam unde repellendus quo possimus porro?</p>							
-					
-				</Card>
+			<img src="/img/women-flowers.webp" alt="Happy women in a field of sunflowers" width="622" height="368" class="max-h-[75%] object-cover" />
 
-				<Card
-					clickable={true} 
-					href="#" 
-					linkText='Click me'
-					linkClass='mx-2'
-					class="drop-shadow shadow-md shadow-slate-200"
-					img="https://source.unsplash.com/random/300x200?nature"
-				>
+		</EvenColumns>
+	</Wrapper>
+</section>
 
-					<h3 slot="heading" class="px-2">Lorem ipsum dolor sit.</h3>
+<section class="bg-primary-100 text-primary-800">
+	<Wrapper width="max" padding="inline">
 
-					<p slot="content" class="px-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, provident. Repudiandae ipsa deserunt nemo veniam unde repellendus quo possimus porro?</p>							
-					
-				</Card>
+		<h2 class="py-16">Here's what you can look forward to as a part of our community:</h2>
 
-			</EvenColumns>
-		</Wrapper>
-	</section>
+		<div class="grid grid-cols-[auto_1fr] md:grid-cols-[100px_1fr_1fr] gap-x-4 gap-y-8 mb-12">
 
-	<section>
-		<Wrapper props width="max" padding="both">
+			<Icon icon="person" class="text-3xl md:text-5xl" />
+			
+			<h3>
+				Monthly meditation calls
+			</h3>
 
-			<h2 class="py-6">
-				Aliquam Incidunt, alias facere?
+			<p class="col-span-2 md:col-span-1">
+				On the first Monday of every month, we come together for a guided meditation and set our intentions for the month ahead. These calls will be recorded so you can revisit then at your convenience.
+			</p>
+
+			<Divider class="bg-primary-200 bg-opacity-50 h-1 col-span-3" />
+			
+			<Icon icon="people" class="text-3xl md:text-5xl" />
+			
+			<h3>
+				Group Teaching calls
+			</h3>
+			
+			<p class="col-span-2 md:col-span-1">
+				Join us for the third Wednesday of each month for a webinar-style group coaching session. From 9am-10am EST I'll share my years of expereince, both successes and failures. These calls will also be recorded.
+			</p>
+			
+			<Divider class="bg-primary-200 bg-opacity-50 h-1 col-span-3" />
+
+			<Icon icon="diversity_1" class="text-3xl md:text-5xl" />
+			
+			<h3>
+				Bi-weekly community gatherings
+			</h3>
+			
+			<p class="col-span-2 md:col-span-1">
+				Every two weeks on Sundays, we gather from 12pm-1:30pm PST/3pm EST/9pm CET. These gatherings are an opportunity to connect with other community members, share what's opening up, get coaching and support each other on individual journeys.  These calls will be live, and not recorded. Bring your questions, successes and failures and we will grow together, connected.
+			</p>
+
+			<Divider class="bg-primary-200 bg-opacity-50 h-1 col-span-3" />
+
+		</div>
+		
+		<div 
+			class="
+				relative grid gap-y-12 items-stretch
+				md:grid-cols-[30ch_1fr] md:gap-x-[10vw] 
+				lg:grid-cols-[40ch_1fr] 
+		">
+
+			<TextFlow class='pb-6'>
+				<p>
+					As a founding member of the Neurospicy Crew, you'll get extra benefits tailored just for you. To ensure personalized attention and guidance the program will start small, allowing for plenty of one on one time with me. This is a community to relax, and discover the essence and inherent gifts of you.
+				</p>
+
+				<p>
+					When you join our community, you will access a wealth of resources and opportunities to connect with like minded individuals. We are in the process of expanding our website to include a membership area, and you'll be able to access premium content and engage in text threads.  In the meantime we stay connected through WhatsApp and meet regularly on Zoom.
+				</p>
+			</TextFlow>
+
+			<img src="/img/megan-1.webp" alt="Megan Riley Portrait" width="721" height="580" class="md:scale-110 origin-top-right object-cover object-right-top rounded-tl-[3rem] rounded-br-[3rem]" />
+
+		</div>
+
+	</Wrapper>
+</section>
+
+<section id="call-to-action">
+	<Wrapper width="text" padding="both">
+		<TextFlow>
+			<p>
+				To begin, and to make sure that the right people are in the community, I'm thrilled to offer you an exclusive opportunity to join our transformative community for only $99/month.  You'll gain all the access to the resources, connections and support the community has to offer. And the calls will be small so you'll have lots of one on one time.
+			</p>
+		</TextFlow>
+	</Wrapper>
+</section>
+
+<section class="bg-primary-600 bg-[url('/img/logo-bg-repeat.svg')] bg-center bg-repeat-x text-secondary-100 text-center py-24 mb-32 text-2xl font-semibold ">
+
+	<a href="https://buy.stripe.com/28o15neBDfxk1Vu14d" class="px-8 py-4 bg-gradient-to-t from-secondary-500 to-secondary-400 hover:from-primary-900 hover:to-primary-800 rounded-tl-xl rounded-br-xl">
+		Join now for $99/month
+	</a>
+
+</section>
+
+<section class="bg-[url('/img/campfire.webp')] bg-cover bg-fixed bg-center">
+	<Wrapper width="text" padding="both" class="min-h-screen place-items-center">
+		<TextFlow class="p-8 md:p-16 m-4 bg-primary-100 bg-opacity-90 text-lg">
+
+			<h2 class="font-semibold">
+				Take advantage of this offer and unlock your neuro<span class="text-secondary-500">spicy</span> potential today
 			</h2>
 
-			<EvenColumns class="gap-6">
+			<p>
+				You are not alone. This is a community of mystics, creatives and normal sensitives too.  We're navigating the challenges of living in a world not designed for us, embracing our unique sensitives, and creating lives filled with love, purpose, and personal fulfillment.
+			</p>
 
-				<TextFlow>
-					<h3>Lorem ipsum dolor</h3>
+			<p>
+				I look forward to welcoming you with open arms to our loving community.
+				I invite you to embark on this transformative journey with us. Join our community today and open the door to a life filled with purpose, connection, and personal empowerment. Together, we will discover the depth of our gifts, tap into our power, and ignite the flames of our hearts.
+				With love and excitement.
+			</p>
 
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, velit? Eaque magni doloribus eligendi, 
-						
-					<p>Q modi commodi, vero non assumenda accusantium explicabo quos tenetur voluptas molestias culpa repellendus hic iusto beatae reprehenderit? Voluptatum eligendi eos praesentium odio animi numquam vitae maiores unde aliquid.</p>
-				</TextFlow>
-
-				<TextFlow>
-					<h3>Consectetur adipisicing elit</h3>
-
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, velit? Eaque magni doloribus eligendi, quas ipsam maxiuam sint, modi commodi.
-						
-					<p>Vero non assumenda accusantium explicabo quos tenetur voluptas molestias culpa repellendus hic iusto beatae repreheum odio animi numquam vitae maiores unde aliquid.</p>
-				</TextFlow>
-
-				<TextFlow>
-					<h3>Accusantium, cumque!</h3>
-
-					<p>Maxime esse repudiandae eos aliquam sint, modi commodi, vero non assumenda accusantium explicabo quos tenetur voluptas molestias culpa repellendus hic iusto beatae reprehenderit? Voluptatum eligendi eos praesentium odio animi numquam vitae maiores unde aliquid.</p>
-					
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, asperiores.</p>
-				</TextFlow>
-
-			</EvenColumns>
-		</Wrapper>
-	</section>
-	
-
-	<section class="bg-primary-800 text-primary-100">
-		<Wrapper width="text" padding="both">
-			<TextFlow>
-				<h2>Heading and Paragraph Exammples</h2>
-		
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur neque iure unde nisi repudiandae pariatur consectetur ipsa quia quaerat laborum rem impedit optio illo, hic, aliquid repellendus cupiditate, ratione quasi?</p>
-		
-				<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, cumque!</h2>
-		
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, velit? Eaque magni doloribus eligendi, quas ipsam maxime esse repudiandae eos aliquam sint, modi commodi, vero non assumenda accusantium explicabo quos tenetur voluptas molestias culpa repellendus hic iusto beatae reprehenderit? Voluptatum eligendi eos praesentium odio animi numquam vitae maiores unde aliquid.</p>
-
-				<h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, consequatur.</h3>
-
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis corporis non cupiditate quae necessitatibus! Qui sapiente quae libero incidunt laudantium.</p>
-
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur neque iure unde nisi repudiandae pariatur consectetur ipsa quia quaerat laborum rem impedit optio illo, hic, aliquid repellendus cupiditate, ratione quasi?</p>
-
-				<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, magnam.</h4>
-
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur neque iure unde nisi repudiandae pariatur consectetur ipsa quia quaerat laborum rem impedit optio illo, hic, aliquid repellendus cupiditate, ratione quasi?</p>
-
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur neque iure unde nisi repudiandae pariatur consectetur ipsa quia quaerat laborum rem impedit optio illo, hic, aliquid repellendus cupiditate, ratione quasi?</p>
-
-				<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, magnam.</h5>
-
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur neque iure unde nisi repudiandae pariatur consectetur ipsa quia quaerat laborum rem impedit optio illo, hic, aliquid repellendus cupiditate, ratione quasi?</p>
-				
-				<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, magnam.</h6>
-
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur neque iure unde nisi repudiandae pariatur consectetur ipsa quia quaerat laborum rem impedit optio illo, hic, aliquid repellendus cupiditate, ratione quasi?</p>
-			</TextFlow>
-		</Wrapper>
-	</section>
-
-	<section>
-		<Wrapper width="text" padding='both'>
-			<TextFlow>
-				<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis incidunt voluptatibus omnis ex. Nihil laboriosam facere distinctio ea neque aperiam consequatur optio soluta a temporibus, possimus voluptates earum quaerat! Illum enim odit harum nulla! Tempore repudiandae suscipit quaerat nostrum consequatur itaque ipsa, debitis inventore consectetur a placeat, explicabo praesentium impedit?</p>
-				<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis incidunt voluptatibus omnis ex. Nihil laboriosam facere distinctio ea neque aperiam consequatur optio soluta a temporibus, possimus voluptates earum quaerat! Illum enim odit harum nulla! Tempore repudiandae suscipit quaerat nostrum consequatur itaque ipsa, debitis inventore consectetur a placeat, explicabo praesentium impedit?</p>
-			</TextFlow>
-		</Wrapper>
-	</section>
+			<p>
+				Megan
+			</p>
 			
+		</TextFlow>
+	</Wrapper>
+</section>
+
+<section class="grid justify-center justify-items-center gap-8 py-24">
+	<img src={ HEADER_LOGO_PATH } alt="Logo" width="34" height="41" />
+	<img src="/img/megan-riley.svg" alt="Megan Riley" width="189" height="22" />
+
+	<a href="#top">Back to Top</a>
+</section>
+
 
 </LandingPageLayout>
