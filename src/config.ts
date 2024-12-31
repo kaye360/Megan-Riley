@@ -74,13 +74,3 @@ export const CONTACT_LINKS: Contactlink[] = [
     },
 ]
 
-
-/**
- * General Types
- */
-
-export interface Layout {
-    title : string,
-    description : string,
-    class? : string
-}

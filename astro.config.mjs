@@ -6,5 +6,8 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site : import.meta.env.PROD ? 'https://meganmriley.com' : 'http://localhost:3000',
-  base : import.meta.env.PROD ? '/join' : '/'
+  base : import.meta.env.PROD ? '/join' : '/',
+  server : {
+    host : true
+  }
 });

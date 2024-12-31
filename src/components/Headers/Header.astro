@@ -1,31 +1,6 @@
 ---
 import Wrapper from '../Wrapper.astro'
 import Logo from '../Logo.astro';
-import MobileMenuBtn from '../Nav/MobileMenuBtn.astro';
-
-interface Props {
-
-    /** Whether or not the header has position: sticky applied */
-    sticky? : boolean,
-
-    /** Is Nav BG transparent when over hero, but has bg color everywhere else? */
-    transparent? : "true" | "false",
-
-    class? : string,
-
-    /**
-     * @prop sticky ( boolean - Default true )
-     * @prop transparent ( 'true' | 'false' - Default 'true' )
-     * @prop slot ( contact | cta | navlinks )
-     */
-    props? : true
-}
-
-const {
-    sticky = true,
-    transparent = "true",
-    class: className = '',
-} = Astro.props
 ---
 
 {/**
@@ -44,11 +19,7 @@ const {
  * 
  */}
 
-<header data-transparent={transparent} id="top" class={`
-    hasColorBG py-2
-    ${ sticky ? 'sticky top-0 z-[999]' : '' }
-    ${className}
-`}>
+<header data-transparent={false} id="top" class="hasColorBG py-2">
 
     <slot name="contact" />
 
